@@ -8,6 +8,7 @@ url = st.text_input("Podaj link do publicznego formularza Google:")
 
 if url:
     options = get_google_form_options(url)
+    options.insert(0, "-----------------------------------------------------------------------------")
 
     if not options:
         st.error("Nie udało się znaleźć żadnych odpowiedzi. Formularz musi być publiczny i mieć wypełnione odpowiedzi.")
