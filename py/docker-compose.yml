@@ -1,0 +1,9 @@
+name: musicon
+services:
+  musicon-app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    command: streamlit run py.py --server.address=0.0.0.0
