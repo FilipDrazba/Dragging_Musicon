@@ -4,10 +4,9 @@ services:
   musicon-app:
     build: .
     container_name: musicon-app
-    volumes:
-      - .:/app
-    command: streamlit run py.py --server.address=0.0.0.0 --server.port=8501
     restart: unless-stopped
+    ports:
+      - "8501:8501"
 
   nginx:
     image: nginx:latest
